@@ -1,0 +1,36 @@
+h1 {
+    color : darkcyan;
+}
+
+.gafield{
+    border: 1px solid black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    height: 80vh;
+    width: 80vw;
+    grid-template-areas: "Title"
+                        "Game_window";
+
+}
+
+
+
+.MainGame{
+    border: 1px solid black;
+}
+
+.start_game{
+    grid-area: Game_window;
+    height: 100%;
+    width: 100%;
+
+}
+.title{
+    grid-area: Title;
+    border: 1px solid red;
+
+}
