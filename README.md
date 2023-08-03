@@ -12,3 +12,6 @@
   ~~1. Добавить возможность играть по сети~~
   2. Добавить ботов (возможно)
   3. Сделать красивый визуал игры
+
+## Пример игры по мультиплееру
+`![GamePlay](https://github.com/TheDonten/BombermanGameOnJs/blob/master/GamePlay.gif)`
