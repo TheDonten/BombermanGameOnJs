@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
 
 let mode = 'development';
 if (process.env.NODE_ENV === 'production'){
@@ -20,6 +21,9 @@ module.exports = {
         new HtmlWebpackPlugin({
         template: "./src/index.html"
     })],
+    devServer: {
+        static: './dist',
+    },
     resolve : {fallback: {
             "fs": false,
             "tls": false,
@@ -69,5 +73,11 @@ module.exports = {
                 use: ['babel-loader'],
             },
         ]
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+        publicPath: '/',
     },
 }
