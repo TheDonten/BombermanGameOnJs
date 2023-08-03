@@ -5,4 +5,4 @@ class MTV{
     }
 }
 
-export default MTV;
+module.exports = MTV;

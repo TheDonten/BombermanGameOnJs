@@ -27,4 +27,5 @@ class Vector{
         return Math.abs(p);
     }
 }
-export default Vector;
+
+module.exports = Vector;

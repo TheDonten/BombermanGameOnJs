@@ -1,23 +1,25 @@
-import Polygons from "../../Shape/Polygons";
+const Polygons = require("../../Shape/Polygons")
 
 class CrashableWall{
-    constructor(x,y,width,height,count_sides,color) {
+    constructor(id, x,y,color) {
         this.start_x = x;
         this.start_y = y;
 
 
-        this.width = width;
-        this.height = height;
+        this.width = 100;
+        this.height = 100;
 
         this.center_x = Math.floor(this.start_x + this.width/2)
         this.center_y = Math.floor(this.start_y + this.height/2)
 
-        this.count_sides = count_sides;
+        this.count_sides = 4;
         this.color = color
         this.type = "CrashableWall";
-        this.Polygons = new Polygons(x,y,width,height,count_sides,color)
+        this.Polygons = new Polygons(x,y,this.width,this.height,this.count_sides,color)
+        this.cell_coord = {};
     }
 
 }
 
-export default CrashableWall;
+
+module.exports = CrashableWall;

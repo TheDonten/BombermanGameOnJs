@@ -1,4 +1,6 @@
-import Polygon from "../../Shape/Polygons";
+// import Polygon from "../../Shape/Polygons";
+
+const Polygon = require("../../Shape/Polygons")
 
 class Cell extends Polygon{
     constructor(x,y,width,height,count_sides,color) {
@@ -9,4 +11,5 @@ class Cell extends Polygon{
 
 }
 
-export default Cell;
+
+module.exports = Cell;

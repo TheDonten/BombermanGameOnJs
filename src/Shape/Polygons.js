@@ -1,6 +1,8 @@
 
-import Vector from "/src/Vector/Vector"
-import Projection from "./Projection"
+// import Vector from "/src/Vector/Vector"
+// import Projection from "./Projection"
+const Vector = require("../Vector/Vector");
+const Projection = require("./Projection");
 
 class Polygon{
     constructor(x,y,width,height, count_sides = 4,color) {
@@ -34,8 +36,6 @@ class Polygon{
     }
 
 
-
-
     create_vertices(){
         let vertics = [];
         vertics.push(new Vector(this.start_x,this.start_y));
@@ -54,7 +54,6 @@ class Polygon{
         let min = axis.dot(this.vertics[0]);
         let max = min;
         for(let i = 1; i < this.vertics.length; i++){
-            //let p = axis.dot(this.vertics[i]);
             let p = axis.dot(this.vertics[i]);
             if(p < min){
                 min = p;
@@ -79,4 +78,5 @@ class Polygon{
     }
 }
 
-export default Polygon;
+
+module.exports = Polygon;

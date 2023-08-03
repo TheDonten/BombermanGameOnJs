@@ -1,11 +1,17 @@
 
-import canvas_me from "/src/Size_canvas"
-import Cell from "/src/Object_Game/Cell/Cell"
+// import canvas_me from "/src/Size_canvas"
+// import Cell from "/src/Object_Game/Cell/Cell"
+
+const canvas_me = require("../../Size_canvas");
+const Cell = require("../Cell/Cell")
+
+const CELL_HEIGHT = 100;
+const CELL_WIDTH = 100;
 
 class Square_Game{
     constructor() {
-        this.height = 100;
-        this.width = 100;
+        this.height = CELL_HEIGHT;
+        this.width = CELL_WIDTH;
         this.squares_cell = this.init_square()
         this.object_wall = [];
         this.object_player = [];
@@ -33,7 +39,7 @@ class Square_Game{
         return squares;
     }
     setWall(Wall){
-        this.object_wall.push(Wall);
+        this.object_wall = Wall;
     }
     getWall(){}
 
@@ -70,7 +76,7 @@ class Square_Game{
             player.Polygons.draw_polyg(ctx,true);
         }
         for(let wall of this.object_wall){
-            wall.draw_polyg(ctx,true);
+            wall.Polygons.draw_polyg(ctx,true);
         }
         for(let crash of this.object_crashable_walls){
             crash.Polygons.draw_polyg(ctx,true);
@@ -78,7 +84,7 @@ class Square_Game{
 
         for(let bomb of this.bombs){
             //debugger;
-            bomb.Polygons.draw_polyg(ctx);
+            //bomb.Polygons.draw_polyg(ctx);
             bomb.Circle_for_Draw.draw(ctx);
         }
         for(let explose of this.explosion){
@@ -96,10 +102,10 @@ class Square_Game{
                 line.draw_polyg(ctx,true);
             }
             debugger;
-            explose.Polygon_collection[0][0].draw_polyg(ctx);
-            explose.Polygon_collection[1][0].draw_polyg(ctx);
-            explose.Polygon_collection[2][0].draw_polyg(ctx);
-            explose.Polygon_collection[3][0].draw_polyg(ctx);
+            // explose.Polygon_collection[0][0].draw_polyg(ctx);
+            // explose.Polygon_collection[1][0].draw_polyg(ctx);
+            // explose.Polygon_collection[2][0].draw_polyg(ctx);
+            // explose.Polygon_collection[3][0].draw_polyg(ctx);
             //explose
         }
     }
@@ -108,4 +114,5 @@ class Square_Game{
     }
 }
 
-export default Square_Game;
+
+module.exports = Square_Game;

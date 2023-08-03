@@ -14,4 +14,4 @@ class Projection{
     }
 }
 
-export default Projection;
+module.exports = Projection;

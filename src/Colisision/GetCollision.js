@@ -1,7 +1,8 @@
 
-import MTV from "./MTV"
+// import MTV from "./MTV"
+const MTV = require("./MTV")
 
-function GetCollision(Polyg_one, Polyg_two){
+module.exports = function GetCollision(Polyg_one, Polyg_two){
     let mtv = new MTV(null, 5000000)
     //let overlap = 5000000;
     //let smallest = null;
@@ -36,4 +37,3 @@ function Get_overlap_und_smallest(Polyg_one, Polyg_two,MTV,axes){
     return true;
 }
 
-export default GetCollision;

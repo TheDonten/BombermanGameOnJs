@@ -21,4 +21,5 @@ class Circle{
     }
 }
 
-export default Circle;
+
+module.exports = Circle;

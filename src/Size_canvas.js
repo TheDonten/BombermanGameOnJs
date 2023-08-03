@@ -3,4 +3,4 @@ const canvas_me = {
     width: 1300
 }
 
-export default canvas_me;
+module.exports = canvas_me;
