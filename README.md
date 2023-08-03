@@ -14,4 +14,4 @@
   3. Сделать красивый визуал игры
 
 ## Пример игры по мультиплееру
-`![GamePlay](https://github.com/TheDonten/BombermanGameOnJs/blob/master/GamePlay.gif)`
+![GamePlay](https://github.com/TheDonten/BombermanGameOnJs/blob/master/GamePlay.gif)
